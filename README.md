@@ -1,2 +1,2 @@
 # Yuki Ikeda
-- [Yuki Ikeda Website](https://yukiikeda.github.io/)
+- [Yuki Ikeda Website](https://yuki-ikeda0810.github.io/)

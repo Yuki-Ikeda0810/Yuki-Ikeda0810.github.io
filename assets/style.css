@@ -1,0 +1,556 @@
+/* 共通カラー */
+:root {
+  --ink: #111827;
+  --muted: #667085;
+  --line: #e5e7eb;
+  --accent: #2457ff;
+  --paper: #fbfbfc;
+}
+
+/* ページ全体の基本設定 */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter,"Noto Sans JP","Yu Gothic",Meiryo,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height: 1.75;
+}
+
+/* ヘッダーとナビゲーション */
+header {
+  height: 72px;
+  padding: 0 max(5vw,24px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: rgba(251,251,252,.92);
+  backdrop-filter: blur(12px);
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.rightnav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+  font-size: 14px;
+}
+
+.lang {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 11px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  background: white;
+}
+
+/* コンテンツ幅とトップの基本レイアウト */
+main,footer {
+  max-width: 1180px;
+  margin: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.hero {
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+.eyebrow,.section-title>p,.tag {
+  font-size: 12px;
+  letter-spacing: .15em;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* 見出し・リード文・ボタン */
+h1 {
+  font-size: clamp(52px,8.5vw,108px);
+  line-height: 1;
+  letter-spacing: -.055em;
+  margin: 18px 0 32px;
+  max-width: 1050px;
+}
+
+html[lang="ja"] h1 {
+  letter-spacing: -.045em;
+}
+
+h1 span {
+  color: #98a2b3;
+}
+
+.lead {
+  font-size: clamp(18px,2vw,24px);
+  max-width: 760px;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.primary {
+  background: var(--ink);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+/* セクション見出しとAbout本文 */
+section:not(.hero) {
+  padding: 110px 0;
+  border-top: 1px solid var(--line);
+}
+
+.section-title {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  margin-bottom: 56px;
+}
+
+.section-title h2 {
+  font-size: clamp(34px,5vw,58px);
+  line-height: 1.15;
+  letter-spacing: -.04em;
+  margin: 0;
+}
+
+.about {
+  margin-left: 33.33%;
+  max-width: 720px;
+  font-size: 19px;
+  color: #344054;
+}
+
+/* 研究・プロジェクトのカードと経歴 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 18px;
+}
+
+.research article,.projects article,.pubbox {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 30px;
+  background: white;
+}
+
+.research b {
+  font-size: 12px;
+  color: #98a2b3;
+}
+
+.research h3,.projects h3,.pubbox h3 {
+  font-size: 25px;
+  margin: 28px 0 8px;
+}
+
+.research p,.projects p,.pubbox p {
+  color: var(--muted);
+}
+
+.visual {
+  height: 210px;
+  border-radius: 12px;
+  background: linear-gradient(135deg,#eef2ff,#f2f4f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  font-weight: 800;
+  letter-spacing: -.06em;
+  color: #98a2b3;
+  margin-bottom: 24px;
+}
+
+.tag {
+  margin-bottom: -18px!important;
+}
+
+.pubbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.career>div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 26px 0;
+  border-top: 1px solid var(--line);
+}
+
+.career span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.career h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* フッター */
+footer {
+  border-top: 1px solid var(--line);
+  padding-top: 55px;
+  padding-bottom: 55px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+footer b {
+  color: var(--ink);
+}
+
+/* スマートフォン向けの基本レイアウト */
+@media(max-width:760px) {
+  nav {
+    display: none;
+  }
+
+  .rightnav {
+    gap: 10px;
+  }
+
+  main,footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  .section-title,.career>div,footer {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
+    margin-left: 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pubbox {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  section:not(.hero) {
+    padding: 75px 0;
+  }
+
+  .visual {
+    height: 160px;
+  }
+}
+
+/* 自己紹介と、開発組織ごとのプロジェクト。 */
+.about p:first-child {
+  margin-top: 0;
+}
+
+.project-group+.project-group {
+  margin-top: 64px;
+}
+
+.organization-heading {
+  margin: 0 0 24px;
+  font-size: clamp(24px,3vw,32px);
+  line-height: 1.4;
+}
+
+.projects h4 {
+  font-size: 25px;
+  margin: 28px 0 8px;
+  line-height: 1.4;
+}
+
+.project-image {
+  height: auto;
+  aspect-ratio: 16/10;
+  background: #f2f4f7;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.project-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+}
+
+section[id] {
+  scroll-margin-top: 90px;
+}
+
+@media(max-width:760px) {
+  .project-group+.project-group {
+    margin-top: 48px;
+  }
+
+  .projects article {
+    padding: 22px;
+  }
+}
+
+/* トップの氏名と研究テーマ。 */
+.hero h1 {
+  font-size: clamp(40px, 5vw, 64px);
+  margin-bottom: 20px;
+  line-height: 1.15;
+}
+
+.hero-name-en {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 20px;
+  letter-spacing: .08em;
+}
+
+.hero-theme {
+  margin: 0;
+  color: var(--accent);
+  font-size: clamp(22px, 4vw, 40px);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* 自己紹介の横にプロフィール写真を配置。 */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 64px);
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+}
+
+.hero-theme {
+  font-size: clamp(22px, 3vw, 34px);
+}
+
+/* SOBITSの縦長画像。画面幅に応じて4列・2列・1列に変更。 */
+.sobits-projects {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.sobits-projects article {
+  padding: 18px;
+}
+
+.sobits-projects .project-image {
+  aspect-ratio: 9 / 13;
+  height: auto;
+  padding: 8px;
+}
+
+.sobits-projects h4 {
+  font-size: 22px;
+}
+
+.sobits-projects .tag {
+  font-size: 10px;
+  letter-spacing: .08em;
+}
+
+@media (max-width: 1000px) {
+  .sobits-projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hero-portrait {
+    width: 100%;
+    max-width: 400px;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobits-projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SNSリンク。透明背景の白いロゴを濃色背景に配置。 */
+.profile-links {
+  display: grid;
+  grid-template-columns: repeat(8, 52px);
+  gap: 10px;
+  width: fit-content;
+  max-width: 100%;
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 12px;
+  background: #111827;
+  border-radius: 16px;
+}
+
+.profile-links li {
+  min-width: 0;
+}
+
+.profile-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+}
+
+.profile-links img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.profile-links a:hover {
+  background: #334155;
+}
+
+.profile-links a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 1px;
+  background: #334155;
+}
+
+/* 写真とリンク欄の下端をそろえる。 */
+.hero-portrait {
+  align-self: end;
+}
+
+@media (min-width: 761px) and (max-width: 1100px), (max-width: 550px) {
+  .profile-links {
+    grid-template-columns: repeat(4, 52px);
+  }
+}
+
+/* 組織名の横に活動期間を表示。 */
+.organization-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-bottom: 24px;
+}
+
+.organization-header .organization-heading {
+  margin: 0;
+}
+
+.organization-period {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* プロジェクトが1件の場合は横幅いっぱいに表示。 */
+.projects-single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* researchmapから取得した所属・経歴・研究業績。 */
+.sync-note {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 12px 0 24px;
+}
+.sync-note a, .publication-list a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.publication-list {
+  padding-left: 24px;
+  margin-bottom: 36px;
+}
+.publication-list li {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+.publication-list a { font-weight: 600; }
+.publication-list p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+.affiliation-list {
+  padding-left: 24px;
+  margin-bottom: 36px;
+}
+.affiliation-list li { margin: 12px 0; }
+.career h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}

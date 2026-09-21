@@ -1,0 +1,993 @@
+{
+  "schema_version": 1,
+  "source": "https://researchmap.jp/yukiikeda",
+  "synced_at": "2026-09-21T22:05:35.104874+00:00",
+  "affiliations": [
+    {
+      "affiliation": {
+        "ja": "JAXA (国立研究開発法人宇宙航空研究開発機構)",
+        "en": "JAXA (Japan Aerospace Exploration Agency)"
+      },
+      "section": {
+        "ja": "研究開発部門",
+        "en": "Research and Development Directorate"
+      }
+    },
+    {
+      "affiliation": {
+        "ja": "株式会社FromEARTH (JAXAスタートアップ)",
+        "en": "FromEARTH Inc. (JAXA Startup)"
+      },
+      "job": {
+        "ja": "代表取締役 CEO",
+        "en": "Representative Director & CEO"
+      }
+    },
+    {
+      "affiliation": {
+        "ja": "創価大学大学院",
+        "en": "Soka University"
+      },
+      "section": {
+        "ja": "理工学研究科 情報システム工学専攻 ",
+        "en": "Graduate School of Science and Engineering"
+      },
+      "job": {
+        "ja": "博士後期課程 (博士)",
+        "en": "Doctoral Program in Information Systems Science (Doctoral Degree)"
+      }
+    },
+    {
+      "affiliation": {
+        "ja": "創価大学",
+        "en": "Soka University"
+      },
+      "section": {
+        "ja": "知能ロボティクス・センシング共創センター",
+        "en": "Center for Intelligent Robotics and Sensing Co-Creation"
+      },
+      "job": {
+        "ja": "拠点研究者",
+        "en": "Researcher"
+      }
+    }
+  ],
+  "research_experience": {
+    "total": 4,
+    "items": [
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/research_experience/54892374",
+        "affiliation": {
+          "ja": "株式会社FromEARTH (JAXAスタートアップ)",
+          "en": "FromEARTH Inc. (JAXA Startup)"
+        },
+        "job": {
+          "ja": "代表取締役 CEO",
+          "en": "Representative Director & CEO"
+        },
+        "from_date": "2026-08",
+        "to_date": "9999"
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/research_experience/53409363",
+        "affiliation": {
+          "ja": "創価大学",
+          "en": "Soka University"
+        },
+        "section": {
+          "ja": "知能ロボティクス・センシング共創センター",
+          "en": "Center for Intelligent Robotics and Sensing Co-Creation"
+        },
+        "job": {
+          "ja": "拠点研究者",
+          "en": "Researcher"
+        },
+        "from_date": "2026-04",
+        "to_date": "9999"
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/research_experience/45882938",
+        "affiliation": {
+          "ja": "JAXA (国立研究開発法人 宇宙航空研究開発機構)",
+          "en": "JAXA (Japan Aerospace Exploration Agency)"
+        },
+        "section": {
+          "ja": "研究開発部門",
+          "en": "Research and Development Directorate"
+        },
+        "job": {
+          "ja": "研究開発員",
+          "en": "Engineer"
+        },
+        "from_date": "2023-04",
+        "to_date": "9999"
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/research_experience/46845283",
+        "affiliation": {
+          "ja": "株式会社スペースデータ",
+          "en": "SpaceData Inc."
+        },
+        "job": {
+          "ja": "宇宙ロボット開発リード",
+          "en": "Lead in Space Robotics Development"
+        },
+        "from_date": "2024-06",
+        "to_date": "2025-11"
+      }
+    ]
+  },
+  "published_papers": {
+    "total": 1,
+    "items": [
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/published_papers/45884820",
+        "paper_title": {
+          "ja": "生活支援ロボットにおける自律的に学習する知能システムを対象とした物体検出手法の開発",
+          "en": "Development of an Object Detection Method Applicable to the Autonomously Learning Intelligent System in Life Support"
+        },
+        "publication_name": {
+          "ja": "創価大学 修士論文",
+          "en": "Soka University Master's Thesis"
+        },
+        "publication_date": "2023-03",
+        "authors": {
+          "ja": [
+            {
+              "name": "池田 勇輝"
+            },
+            {
+              "name": "崔 龍雲"
+            }
+          ],
+          "en": [
+            {
+              "name": "Yuki Ikeda"
+            },
+            {
+              "name": "Yongwoon Choi"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "presentations": {
+    "total": 28,
+    "items": [
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/54892330",
+        "presentation_title": {
+          "ja": "ロボット競技を通じた宇宙船内人協調ロボティクス技術の展望",
+          "en": "Prospects for Human-Robot Collaborative Technologies in Spacecraft through Robot Competitions"
+        },
+        "event": {
+          "ja": "第44回日本ロボット学会学術講演会",
+          "en": "44th Annual Conference of the Robotics Society of Japan"
+        },
+        "publication_date": "2026-09-03",
+        "from_event_date": "2026-09-02",
+        "presenters": {
+          "ja": [
+            {
+              "name": "西下 敦青"
+            },
+            {
+              "name": "池田 勇輝"
+            },
+            {
+              "name": "本田 瑛彦"
+            },
+            {
+              "name": "萩原 良信"
+            },
+            {
+              "name": "岡田 浩之"
+            }
+          ],
+          "en": [
+            {
+              "name": "Taisei Nishishita"
+            },
+            {
+              "name": "Yuki Ikeda"
+            },
+            {
+              "name": "Akihiko Honda"
+            },
+            {
+              "name": "Yoshinobu Hagiwara"
+            },
+            {
+              "name": "Hiroyuki Okada"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/54892338",
+        "presentation_title": {
+          "ja": "ロボット基盤モデルのためのオープン双腕モバイルマニピュレータの開発",
+          "en": "Development of an Open-Source Dual-Arm Mobile Manipulator for Robot Foundation Models"
+        },
+        "event": {
+          "ja": "第44回日本ロボット学会学術講演会",
+          "en": "44th Annual Conference of the Robotics Society of Japan"
+        },
+        "publication_date": "2026-09-02",
+        "from_event_date": "2026-09-01",
+        "presenters": {
+          "ja": [
+            {
+              "name": "VALENTIN CARDENAS Keith"
+            },
+            {
+              "name": "小野 郁哉"
+            },
+            {
+              "name": "鈴木 幸志郎"
+            },
+            {
+              "name": "花嶋 優作"
+            },
+            {
+              "name": "SIM Jiahao"
+            },
+            {
+              "name": "LEE Junho"
+            },
+            {
+              "name": "塚田 太郎"
+            },
+            {
+              "name": "佐藤 健太"
+            },
+            {
+              "name": "池田 勇輝"
+            },
+            {
+              "name": "萩原 良信"
+            },
+            {
+              "name": "崔 龍雲"
+            }
+          ],
+          "en": [
+            {
+              "name": "Keith Valentin Cardenas"
+            },
+            {
+              "name": "Fumiya Ono"
+            },
+            {
+              "name": "Koshiro Suzuki"
+            },
+            {
+              "name": "Yusaku Hanajima"
+            },
+            {
+              "name": "Jiahao Sim"
+            },
+            {
+              "name": "Junho Lee"
+            },
+            {
+              "name": "Taro Tsukada"
+            },
+            {
+              "name": "Kenta Sato"
+            },
+            {
+              "name": "Yuki Ikeda"
+            },
+            {
+              "name": "Yoshinobu Hagiwara"
+            },
+            {
+              "name": "Yongwoon Choi"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/54892323",
+        "presentation_title": {
+          "ja": "【基調講演】RoboCup JapanOpen 2026 @Space Challengeにおける宇宙AIロボットベンチマークの設計と実施",
+          "en": "[Keynote Speech] Design and Implementation of a Space AI Robot Benchmark at RoboCup JapanOpen 2026 @Space Challenge"
+        },
+        "event": {
+          "ja": "第44回日本ロボット学会学術講演会",
+          "en": "44th Annual Conference of the Robotics Society of Japan"
+        },
+        "publication_date": "2026-09-02",
+        "from_event_date": "2026-09-01",
+        "presenters": {
+          "ja": [
+            {
+              "name": "池田 勇輝"
+            },
+            {
+              "name": "萩原 良信"
+            },
+            {
+              "name": "西下 敦青"
+            },
+            {
+              "name": "本田 瑛彦"
+            },
+            {
+              "name": "岡田 浩之"
+            }
+          ],
+          "en": [
+            {
+              "name": "Yuki Ikeda"
+            },
+            {
+              "name": "Yoshinobu Hagiwara"
+            },
+            {
+              "name": "Taisei Nishishita"
+            },
+            {
+              "name": "Akihiko Honda"
+            },
+            {
+              "name": "Hiroyuki Okada"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/54581089",
+        "presentation_title": {
+          "ja": "ROSを活用した宇宙ロボット向け技術実証プラットフォームSATDyn / C2Dynの開発とSpace ROS (RACS2) への展開",
+          "en": "Development of the ROS-Based SATDyn/C2Dyn Technology Demonstration Platform for Space Robotics and Its Extension to Space ROS (RACS2)"
+        },
+        "event": {
+          "ja": "ROSCon JP 2026",
+          "en": "ROSCon JP 2026"
+        },
+        "publication_date": "2026-08-04",
+        "from_event_date": "2026-08-04",
+        "presenters": {
+          "ja": [
+            {
+              "name": "池田 勇輝"
+            },
+            {
+              "name": "岡本 博之"
+            },
+            {
+              "name": "西下 敦青"
+            },
+            {
+              "name": "加藤 裕基"
+            }
+          ],
+          "en": [
+            {
+              "name": "Yuki Ikeda"
+            },
+            {
+              "name": "Hiroyuki Okamoto"
+            },
+            {
+              "name": "Taisei Nishishita"
+            },
+            {
+              "name": "Hiroki Kato"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/54892416",
+        "presentation_title": {
+          "ja": "ロボカップ競技の宇宙への展開",
+          "en": "Expansion of RoboCup Competitions into Space"
+        },
+        "event": {
+          "ja": "栢森情報科学振興財団 30周年企画 ロボカップワークショップ",
+          "en": "Kayamori Foundation of Informational Science Advancement 30th Anniversary RoboCup Workshop"
+        },
+        "publication_date": "2026-02-28",
+        "presenters": {
+          "ja": [
+            {
+              "name": "池田 勇輝"
+            }
+          ],
+          "en": [
+            {
+              "name": "Yuki Ikeda"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/51863394",
+        "presentation_title": {
+          "ja": "RoboCup@Space Challenge チュートリアル",
+          "en": "RoboCup@Space Challenge Tutorial"
+        },
+        "event": {
+          "ja": "第13回インテリジェントホームロボティクス研究会",
+          "en": "The 13th Intelligent Home Robotics Workshop"
+        },
+        "publication_date": "2025-12-14",
+        "from_event_date": "2025-12-13",
+        "presenters": {
+          "ja": [
+            {
+              "name": "池田 勇輝"
+            }
+          ],
+          "en": [
+            {
+              "name": "Yuki Ikeda"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/51863377",
+        "presentation_title": {
+          "en": "Toward RoboCup@Space: A Virtual Competition Platform for Int-Ball2 Tasks in the JEM Environment"
+        },
+        "event": {
+          "en": "International Conference on Space Robotics 2025 Workshop"
+        },
+        "publication_date": "2025-12-04",
+        "from_event_date": "2025-12-01",
+        "presenters": {
+          "en": [
+            {
+              "name": "Taisei Nishishita"
+            },
+            {
+              "name": "Yuki Ikeda"
+            },
+            {
+              "name": "Seiko Piotr Yamaguchi"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/51863329",
+        "presentation_title": {
+          "en": "A Demonstration of Space ROS (RACS2) with the TurtleBot3 Platform"
+        },
+        "event": {
+          "en": "International Conference on Space Robotics 2025 Workshop"
+        },
+        "publication_date": "2025-12-04",
+        "from_event_date": "2025-12-01",
+        "presenters": {
+          "en": [
+            {
+              "name": "Yuki Ikeda"
+            },
+            {
+              "name": "Taisei Nishishita"
+            },
+            {
+              "name": "Hiroki Kato"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/51863306",
+        "presentation_title": {
+          "ja": "新型軌道上サービス技術実証プラットフォーム（C2Dyn）の開発",
+          "en": "Development of a Novel On-Orbit Servicing Technology Demonstration Platform (C2Dyn)"
+        },
+        "event": {
+          "ja": "第69回 宇宙科学技術連合講演会",
+          "en": "The 69th Space Science and Technology Conference"
+        },
+        "publication_date": "2025-11-28",
+        "from_event_date": "2025-11-25",
+        "presenters": {
+          "ja": [
+            {
+              "name": "岡本博之"
+            },
+            {
+              "name": "池田勇輝"
+            }
+          ],
+          "en": [
+            {
+              "name": "Hiroyuki Okamoto"
+            },
+            {
+              "name": "Yuki Ikeda"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/51864378",
+        "presentation_title": {
+          "ja": "次世代宇宙ステーションに向けたテザーマネジメント フリーフライヤロボットとホバークラフト型試験装置の開発",
+          "en": "Development of Tether-Managed Free-Flyer Robot and Hovercraft Testbed for Next-Generation Space Stations"
+        },
+        "event": {
+          "ja": "第69回 宇宙科学技術連合講演会",
+          "en": "The 69th Space Science and Technology Conference"
+        },
+        "publication_date": "2025-11-25",
+        "from_event_date": "2025-11-25",
+        "presenters": {
+          "ja": [
+            {
+              "name": "池田勇輝"
+            },
+            {
+              "name": "バレンティンケイト"
+            },
+            {
+              "name": "小澤悠"
+            },
+            {
+              "name": "清水杜織"
+            },
+            {
+              "name": "鈴木幸志郎"
+            },
+            {
+              "name": "伊藤剛"
+            }
+          ],
+          "en": [
+            {
+              "name": "Yuki Ikeda"
+            },
+            {
+              "name": "Keith Valentin"
+            },
+            {
+              "name": "Yu Ozawa"
+            },
+            {
+              "name": "Tori Shimizu"
+            },
+            {
+              "name": "Koshiro Suzuki"
+            },
+            {
+              "name": "Tsuyoshi Ito"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/51863313",
+        "presentation_title": {
+          "ja": "Int-Ball2を利用したROSとcFSを接続するRACS2の 軌道上実証",
+          "en": "On-Orbit Demonstration of RACS2 Connecting ROS and cFS on Int-Ball2"
+        },
+        "event": {
+          "ja": "第69回 宇宙科学技術連合講演会",
+          "en": "The 69th Space Science and Technology Conference"
+        },
+        "publication_date": "2025-11-25",
+        "from_event_date": "2025-11-25",
+        "presenters": {
+          "ja": [
+            {
+              "name": "斎藤達彦"
+            },
+            {
+              "name": "池田勇輝"
+            },
+            {
+              "name": "西下敦青"
+            },
+            {
+              "name": "加藤裕基"
+            }
+          ],
+          "en": [
+            {
+              "name": "Tatsuhiko Saito"
+            },
+            {
+              "name": "Yuki Ikeda"
+            },
+            {
+              "name": "Taisei Nishishita"
+            },
+            {
+              "name": "Hiroki Kato"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/51466474",
+        "presentation_title": {
+          "en": "Development and Orbital Operation Considerations of a Free-Flyer Robot for Monitoring and Teleoperation Aboard a Space Station"
+        },
+        "event": {
+          "en": "International Astronautical Congress 2025"
+        },
+        "publication_date": "2025-10-02",
+        "from_event_date": "2025-09-29",
+        "presenters": {
+          "en": [
+            {
+              "name": "Yuki Ikeda"
+            },
+            {
+              "name": "Keith Valentin Cardenas"
+            },
+            {
+              "name": "Yu Ozawa"
+            },
+            {
+              "name": "Tori Shimizu"
+            },
+            {
+              "name": "Koshiro Suzuki"
+            },
+            {
+              "name": "Tsuyoshi Ito"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/51466471",
+        "presentation_title": {
+          "ja": "宇宙アプリケーションへのROS適用に向けた取り組み：RACS2によるcFS-ROS2連携のISS軌道上実証",
+          "en": "Efforts Toward Applying ROS to Space Applications: On-Orbit Demonstration of cFS–ROS2 Integration on the ISS Using RACS2"
+        },
+        "event": {
+          "ja": "ROSCon JP 2025",
+          "en": "ROSCon JP 2025"
+        },
+        "publication_date": "2025-09-09",
+        "presenters": {
+          "ja": [
+            {
+              "name": "西下 敦青"
+            },
+            {
+              "name": "池田 勇輝"
+            },
+            {
+              "name": "加藤 裕基"
+            }
+          ],
+          "en": [
+            {
+              "name": "Taisei Nishishita"
+            },
+            {
+              "name": "Yuki Ikeda"
+            },
+            {
+              "name": "Hiroki Kato"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/51466470",
+        "presentation_title": {
+          "ja": "ISS 船内ロボットInt-Ball2 による技術実証と RoboCup@Spaceへの展開 ～宇宙飛行士の作業支援および船内業務の自動化・自律化に向けて～",
+          "en": "Technology Demonstration by the ISS Onboard Robot Int-Ball2 and Its Extension to RoboCup@Space – Toward Astronaut Task Support and the Automation and Autonomy of Onboard Operations"
+        },
+        "event": {
+          "ja": "第43回 日本ロボット学会学術講演会",
+          "en": "43rd Annual Conference of the Robotics Society of Japan"
+        },
+        "publication_date": "2025-09-03",
+        "from_event_date": "2025-09-02",
+        "presenters": {
+          "ja": [
+            {
+              "name": "池田勇輝"
+            },
+            {
+              "name": "萩原良信"
+            },
+            {
+              "name": "西下敦青"
+            },
+            {
+              "name": "山口正光ピヨトル"
+            },
+            {
+              "name": "岡田浩之"
+            },
+            {
+              "name": "大塚聡子"
+            },
+            {
+              "name": "山本竜也"
+            }
+          ],
+          "en": [
+            {
+              "name": "Yuki Ikeda"
+            },
+            {
+              "name": "Yoshinobu Hagiwara"
+            },
+            {
+              "name": "Taisei Nishishita"
+            },
+            {
+              "name": "Seiko Piotr Yamaguchi"
+            },
+            {
+              "name": "Hiroyuki Okada"
+            },
+            {
+              "name": "Satoko Otsuka"
+            },
+            {
+              "name": "Tatsuya Yamamoto"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/51466462",
+        "presentation_title": {
+          "ja": "RoboCup JapanOpen @Space Challenge の構想 ーISS船内を模倣した自律ロボット競技の提案ー",
+          "en": "Concept of RoboCup Japan Open @Space Challenge – Proposal for an Autonomous Robot Competition Simulating the Inside of the ISS"
+        },
+        "event": {
+          "ja": "第43回 日本ロボット学会学術講演会",
+          "en": "43rd Annual Conference of the Robotics Society of Japan"
+        },
+        "publication_date": "2025-09-03",
+        "from_event_date": "2025-09-02",
+        "presenters": {
+          "ja": [
+            {
+              "name": "萩原良信"
+            },
+            {
+              "name": "池田勇輝"
+            },
+            {
+              "name": "岡田浩之"
+            },
+            {
+              "name": "西野順二"
+            },
+            {
+              "name": "稲邑哲也"
+            },
+            {
+              "name": "大井翔"
+            }
+          ],
+          "en": [
+            {
+              "name": "Yoshinobu Hagiwara"
+            },
+            {
+              "name": "Yuki Ikeda"
+            },
+            {
+              "name": "Hiroyuki Okada"
+            },
+            {
+              "name": "Junji Nishino"
+            },
+            {
+              "name": "Tetsuya Inamura"
+            },
+            {
+              "name": "Sho Oi"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/50418342",
+        "presentation_title": {
+          "ja": "SMARTERハンドレール: 船内活動用小型推進ユニットの研究開発",
+          "en": "Research and Development of SMARTER Handrail: A Handheld Maneuvering Unit for Intra-Vehicular Activity"
+        },
+        "event": {
+          "ja": "ロボティクス・メカトロニクス講演会 2025",
+          "en": "The Robotics and Mechatronics Conference 2025"
+        },
+        "from_event_date": "2025-06-04",
+        "presenters": {
+          "ja": [
+            {
+              "name": "清水 杜織"
+            },
+            {
+              "name": "池田 勇輝"
+            }
+          ],
+          "en": [
+            {
+              "name": "Tori Shimizu"
+            },
+            {
+              "name": "Yuki Ikeda"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/49835558",
+        "presentation_title": {
+          "en": "Observational And Simulation-Based Insights Into Attitude Dynamics Of Large Rocket Debris For Active Debris Removal"
+        },
+        "event": {
+          "en": "9th European Conference on Space Debris"
+        },
+        "from_event_date": "2025-04-01",
+        "presenters": {
+          "en": [
+            {
+              "name": "Hiroyuki Okamoto"
+            },
+            {
+              "name": "Yuki Ikeda"
+            },
+            {
+              "name": "Moeko Hidaka"
+            },
+            {
+              "name": "Daichi Hirano"
+            },
+            {
+              "name": "Shinji Mitani"
+            },
+            {
+              "name": "Toru Yamamoto"
+            },
+            {
+              "name": "Lars Fuhrman"
+            },
+            {
+              "name": "Frank Schlichthaber"
+            },
+            {
+              "name": "Taro Kashiwayanagi"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/49030529",
+        "presentation_title": {
+          "en": "Attitude Motion Of Orbital Debris: Data From Ground-Based Radar And ADRAS-J Observations"
+        },
+        "event": {
+          "en": "35th AAS/AIAA Space Flight Mechanics Meeting"
+        },
+        "from_event_date": "2025-01-19",
+        "presenters": {
+          "en": [
+            {
+              "name": "Hiroyuki Okamoto"
+            },
+            {
+              "name": "Yuki Ikeda"
+            },
+            {
+              "name": "Shinji Mitani"
+            },
+            {
+              "name": "Ryo Nakamura"
+            },
+            {
+              "name": "Toru Yamamoto"
+            },
+            {
+              "name": "Lars Fuhrmann"
+            },
+            {
+              "name": "Frank Schlichthaber"
+            },
+            {
+              "name": "Taro Kashiwayanagi"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/49030501",
+        "presentation_title": {
+          "en": "GNC Performance Evaluation for Active Debris Removal Missions via Dynamic Closed Loop Simulation"
+        },
+        "event": {
+          "en": "AIAA SciTech Forum and Exposition 2025"
+        },
+        "from_event_date": "2025-01-06",
+        "presenters": {
+          "en": [
+            {
+              "name": "Taisei Nishishita"
+            },
+            {
+              "name": "Hiroyuki Okamoto"
+            },
+            {
+              "name": "Takahiro Sasaki"
+            },
+            {
+              "name": "Yu Nakajima"
+            },
+            {
+              "name": "Hikaru Mizuno"
+            },
+            {
+              "name": "Yuki Ikeda"
+            },
+            {
+              "name": "Ryo Nakamura"
+            },
+            {
+              "name": "Keito Yoshida"
+            },
+            {
+              "name": "Kiyoshi Hamada"
+            },
+            {
+              "name": "Akinobu Hayakawa"
+            },
+            {
+              "name": "Kosuke Sukegawa"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/presentations/48521180",
+        "presentation_title": {
+          "ja": "CRD2 フェーズ I 取得画像によるターゲットスペース デブリの状況分析",
+          "en": "Preliminary Analysis of Target Space Debris Using CRD2 Phase I Imagery"
+        },
+        "event": {
+          "ja": "第68回 宇宙科学技術連合講演会",
+          "en": "The 68th Space Science and Technology Conference"
+        },
+        "publication_date": "2024-11-08",
+        "from_event_date": "2024-11-05",
+        "presenters": {
+          "ja": [
+            {
+              "name": "岡本博之"
+            },
+            {
+              "name": "柏柳太郎"
+            },
+            {
+              "name": "商業デブリ除去実証チーム (宇宙航空研究開発機構)"
+            }
+          ],
+          "en": [
+            {
+              "name": "Hiroyuki Okamoto"
+            },
+            {
+              "name": "Taro Kashiwayanagi"
+            },
+            {
+              "name": "Commercial Removal of"
+            },
+            {
+              "name": "Debris Demonstration Team (Japan Aerospace Exploration Agency"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

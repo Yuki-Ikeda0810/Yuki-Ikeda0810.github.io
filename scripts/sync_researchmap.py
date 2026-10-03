@@ -82,28 +82,32 @@ def period(item, lang):
 
 
 def affiliation(item, lang):
-    return " / ".join(localized(item.get(key), lang) for key in ("affiliation", "section", "job")
-                      if localized(item.get(key), lang))
+    # Display researchmap affiliation data without adding organization links.
+    return " / ".join(
+        text(localized(item.get(key), lang).strip())
+        for key in ("affiliation", "section", "job")
+        if localized(item.get(key), lang).strip()
+    )
 
 
 def source_note(data, lang):
     label = "最終取得" if lang == "ja" else "Last synced"
     return (f'<p class="sync-note">{label}: {text(data["synced_at"][:10])} (UTC) · '
-            f'<a href="{PROFILE}">researchmap ↗</a></p>')
+            f'<a href="{PROFILE}" target="_blank" rel="noopener noreferrer">researchmap ↗</a></p>')
 
 
 def render_career(data, lang):
     ja = lang == "ja"
     heading = "所属・経歴" if ja else "Affiliations &amp; experience"
-    result = [f'<div class="section-title"><p>05 / CAREER</p><h2>{heading}</h2></div>',
+    result = [f'<div class="section-title"><p>02 / CAREER</p><h2>{heading}</h2></div>',
               source_note(data, lang),
               f'<h3>{"現在の所属" if ja else "Current affiliations"}</h3>',
               '<ul class="affiliation-list">']
-    result += [f'<li>{text(affiliation(item, lang))}</li>' for item in data["affiliations"]]
+    result += [f'<li>{affiliation(item, lang)}</li>' for item in data["affiliations"]]
     result += ['</ul>', f'<h3>{"経歴" if ja else "Experience"}</h3>', '<div class="career">']
     items = sorted(data["research_experience"]["items"], key=lambda x: x.get("from_date", ""), reverse=True)
     for item in items:
-        result.append(f'<div><span>{text(period(item, lang))}</span><h4>{text(affiliation(item, lang))}</h4></div>')
+        result.append(f'<div><span>{text(period(item, lang))}</span><h4>{affiliation(item, lang)}</h4></div>')
     if not items:
         result.append(f'<p>{"公開されている経歴はありません。" if ja else "No public experience records available."}</p>')
     result.append('</div>')
@@ -132,12 +136,12 @@ def render_publications(data, lang):
             venue = localized(item.get("publication_name", item.get("event", {})), lang)
             date = item.get("publication_date", item.get("from_event_date", ""))
             metadata = " · ".join(value for value in (authors, venue, date) if value)
-            result.append(f'<li><a href="{text(url)}">{text(name)}</a><p>{text(metadata)}</p></li>')
+            result.append(f'<li><a href="{text(url)}" target="_blank" rel="noopener noreferrer">{text(name)}</a><p>{text(metadata)}</p></li>')
         result.append('</ol>')
         if not items:
             result.append(f'<p>{"公開情報はありません。" if ja else "No public records available."}</p>')
     label = "すべての研究業績をresearchmapで見る ↗" if ja else "View all research outputs on researchmap ↗"
-    result.append(f'<a class="primary" href="{PROFILE}">{label}</a>')
+    result.append(f'<a class="primary" href="{PROFILE}" target="_blank" rel="noopener noreferrer">{label}</a>')
     return "\n".join(result)
 
 

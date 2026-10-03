@@ -236,7 +236,7 @@ footer {
   padding-top: 55px;
   padding-bottom: 55px;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   color: var(--muted);
   font-size: 13px;
@@ -372,7 +372,7 @@ section[id] {
   gap: clamp(28px, 5vw, 64px);
 }
 
-.hero-copy {
+.hero-identity, .hero-details {
   min-width: 0;
 }
 
@@ -553,4 +553,92 @@ section[id] {
   font-size: 18px;
   font-weight: 600;
   overflow-wrap: anywhere;
+}
+
+/* HTMLの順序は氏名→写真→テーマ・リンク。PCでは写真を右側に配置。 */
+.hero {
+  grid-template-areas: "identity portrait" "details portrait";
+  row-gap: 0;
+}
+.hero-identity {
+  grid-area: identity;
+  align-self: end;
+}
+.hero-details {
+  grid-area: details;
+  align-self: start;
+}
+.hero-portrait {
+  grid-area: portrait;
+}
+
+/* FromEARTHの船内ロボットを2枚の画像で紹介。 */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+.project-gallery .project-image {
+  margin-bottom: 0;
+}
+@media (max-width: 760px) {
+  .hero {
+    grid-template-areas: "identity" "portrait" "details";
+    row-gap: 24px;
+  }
+  .hero-identity .hero-name-en {
+    margin-bottom: 0;
+  }
+  .hero-identity h1 {
+    margin-bottom: 12px;
+  }
+  .hero-details .lead br {
+    display: none;
+  }
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 組織名から公式サイトへ移動。 */
+.organization-name {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+.organization-link {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 400;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.organization-link:hover {
+  text-decoration-thickness: 2px;
+}
+.organization-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* SOBITSの関連サイトを見出しの下にまとめる。 */
+.organization-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  flex-basis: 100%;
+}
+.organization-links .organization-link {
+  white-space: normal;
+}
+
+/* PCでは写真を少し上へ。スマートフォンの表示順序は維持。 */
+@media (min-width: 761px) {
+  .hero-portrait {
+    position: relative;
+    top: -48px;
+  }
 }

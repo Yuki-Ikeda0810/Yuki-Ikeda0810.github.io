@@ -492,6 +492,22 @@ section[id] {
   }
 }
 
+/* スマホではSNS欄を本文幅いっぱいに広げ、各アイコンを均等に中央配置。 */
+@media (max-width: 760px) {
+  .profile-links {
+    width: 100%;
+    margin-inline: 0;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-items: center;
+  }
+}
+
+@media (min-width: 551px) and (max-width: 760px) {
+  .profile-links {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+}
+
 /* 組織名の横に活動期間を表示。 */
 .organization-header {
   display: flex;
@@ -640,5 +656,20 @@ section[id] {
   .hero-portrait {
     position: relative;
     top: -48px;
+  }
+}
+
+/* スマホでは固定改行を外し、短い語句を分断せず見出しを折り返す。 */
+@media (max-width: 760px) {
+  .section-title .about-heading {
+    text-wrap: balance;
+    line-height: 1.4;
+  }
+  .about-heading .desktop-break {
+    display: none;
+  }
+  .about-heading .heading-phrase {
+    display: inline-block;
+    white-space: nowrap;
   }
 }

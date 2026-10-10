@@ -1,5 +1,7 @@
 # Yuki Ikeda Portfolio
 
+公開サイト：[Yuki Ikeda Portfolio](https://yuki-ikeda0810.github.io/)
+
 日本語をルート `/`、英語を `/en/` にした静的サイト。
 
 ## Local preview
@@ -67,3 +69,7 @@ HTMLの `researchmap:...:start` と `researchmap:...:end` の間は自動生成�
 ```bash
 python -m unittest discover -s scripts -p "test_*.py"
 ```
+
+## Favicon
+
+`assets/favicon.svg` と `assets/favicon.ico` に、濃紺・白・青の「YI」アイコンを配置しています。日英ページで共通利用します。

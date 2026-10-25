@@ -27,8 +27,8 @@ jobs:
         uses: actions/cache/restore@v5
         with:
           path: data/researchmap.json
-          key: researchmap-v1-${{ github.run_id }}-${{ github.run_attempt }}
-          restore-keys: researchmap-v1-
+          key: researchmap-v2-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: researchmap-v2-
       - name: Sync public researchmap data
         run: python scripts/sync_researchmap.py --allow-stale
       - name: Verify sync behavior
@@ -37,7 +37,7 @@ jobs:
         uses: actions/cache/save@v5
         with:
           path: data/researchmap.json
-          key: researchmap-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          key: researchmap-v2-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Prepare public files only
         run: |
           mkdir _site

@@ -1,7 +1,7 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source": "https://researchmap.jp/yukiikeda",
-  "synced_at": "2026-09-21T22:05:35.104874+00:00",
+  "synced_at": "2026-10-25T08:10:46.594748+00:00",
   "affiliations": [
     {
       "affiliation": {
@@ -43,7 +43,7 @@
         "en": "Soka University"
       },
       "section": {
-        "ja": "知能ロボティクス・センシング共創センター",
+        "ja": "知能ロボティクス・センシング共創拠点",
         "en": "Center for Intelligent Robotics and Sensing Co-Creation"
       },
       "job": {
@@ -75,7 +75,7 @@
           "en": "Soka University"
         },
         "section": {
-          "ja": "知能ロボティクス・センシング共創センター",
+          "ja": "知能ロボティクス・センシング共創拠点",
           "en": "Center for Intelligent Robotics and Sensing Co-Creation"
         },
         "job": {
@@ -986,6 +986,187 @@
               "name": "Debris Demonstration Team (Japan Aerospace Exploration Agency"
             }
           ]
+        }
+      }
+    ]
+  },
+  "media_coverage": {
+    "total": 12,
+    "items": [
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/55207281",
+        "event": {
+          "ja": "創価大ニュース「SUN」131号 2026 Autumn",
+          "en": "Soka University News “SUN” Issue No. 131, Autumn 2026"
+        },
+        "publication_date": "2026-10-08",
+        "media_coverage_title": {
+          "ja": "ただいま、創大 ～あの日の学び、今も活きています～「卒業生インタビュー」",
+          "en": "Welcome Back to Soka University – The Lessons We Learned Then Still Guide Us Today – Alumni Interview"
+        },
+        "publisher": {
+          "ja": "創価大学",
+          "en": "Soka University"
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/54695746",
+        "publication_date": "2026-07-24",
+        "media_coverage_title": {
+          "ja": "【地上で検証し、宇宙で実現する】軌道上サービスを支える試験設備「SATDyn」とは？",
+          "en": "【Test on Earth, Realize in Space】What Is SATDyn, a Testing Facility Supporting On-Orbit Services?"
+        },
+        "publisher": {
+          "ja": "宇宙航空研究開発機構 (JAXA) YouTube",
+          "en": "Japan Aerospace Exploration Agency (JAXA) YouTube"
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/51466480",
+        "event": {
+          "ja": "CGWORLD",
+          "en": "CGWORLD"
+        },
+        "publication_date": "2025-09-10",
+        "media_coverage_title": {
+          "ja": "CGWORLD 2025年10月号 vol.326",
+          "en": "CGWORLD October 2025 Issue, Vol. 326"
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/50917653",
+        "event": {
+          "ja": "JAXA研究紹介記事",
+          "en": "JAXA Research Introduction Article"
+        },
+        "publication_date": "2025-07-08",
+        "media_coverage_title": {
+          "ja": "「ROS2 and cFS System (RACS2) Bridge」ソフトウェア、 ISS船内の自律カメラロボット「Int-Ball2」で 軌道上実証に成功",
+          "en": "ROS2 and cFS System (RACS2) Bridge software, Int-Ball2 autonomous camera robot inside the ISS, successful demonstration in orbit"
+        },
+        "publisher": {
+          "ja": "宇宙航空研究開発機構 (JAXA) 研究開発部門",
+          "en": "Japan Aerospace Exploration Agency (JAXA) Research and Development Directorate"
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/47588782",
+        "event": {
+          "ja": "株式会社スペースデータ インタビュー",
+          "en": "Space Data Inc. Interview"
+        },
+        "publication_date": "2024-08-31",
+        "media_coverage_title": {
+          "ja": "株式会社スペースデータ【インタビュー#3】宇宙ロボット開発統括 Tech Lead | 池田勇輝さん",
+          "en": "Space Data Inc. [Interview #3] Tech Lead, Space Robot Development | Yuki Ikeda"
+        },
+        "publisher": {
+          "ja": "Wantedly株式会社",
+          "en": "Wantedly Inc."
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/47521724",
+        "event": {
+          "ja": "日経ビジネス，日経xTECH",
+          "en": "Nikkei Business, Nikkei xTECH"
+        },
+        "publication_date": "2024-08-26",
+        "media_coverage_title": {
+          "ja": "スペースデブリの捕獲から将来的な応用まで JAXAが研究開発する軌道上サービス技術実証プラットフォーム",
+          "en": "On-orbit service technology demonstration platform for JAXA's research and development from space debris capture to future applications"
+        },
+        "publisher": {
+          "ja": "株式会社 日経BP",
+          "en": "Nikkei Business Publications, Inc."
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/53847917",
+        "event": {
+          "ja": "プレスリリース",
+          "en": "Press Release"
+        },
+        "publication_date": "2024-07-30",
+        "media_coverage_title": {
+          "ja": "商業デブリ除去実証フェーズI 「周回観測」の画像を公開",
+          "en": "CRD2 Phase I / ADRAS-J Update: Fly-Around Observation Images of Space Debris Released"
+        },
+        "publisher": {
+          "ja": "宇宙航空研究開発機構 (JAXA)",
+          "en": "Japan Aerospace Exploration Agency (JAXA)"
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/53847879",
+        "event": {
+          "ja": "プレスリリース",
+          "en": "Press Release"
+        },
+        "publication_date": "2024-06-14",
+        "media_coverage_title": {
+          "ja": "商業デブリ除去実証フェーズI「定点観測」の画像を公開",
+          "en": "CRD2 Phase I / ADRAS-J update: “fixed-point observation” images of space debris have been released"
+        },
+        "publisher": {
+          "ja": "宇宙航空研究開発機構 (JAXA)",
+          "en": "Japan Aerospace Exploration Agency (JAXA)"
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/53847853",
+        "event": {
+          "ja": "プレスリリース",
+          "en": "Press Release"
+        },
+        "publication_date": "2024-04-26",
+        "media_coverage_title": {
+          "ja": "商業デブリ除去実証フェーズI における軌道上のスペースデブリ画像を公開",
+          "en": "First target image from orbit: The image of space debris from Commercial Removal of Debris Demonstration Phase I has been released"
+        },
+        "publisher": {
+          "ja": "宇宙航空研究開発機構 (JAXA)",
+          "en": "Japan Aerospace Exploration Agency (JAXA)"
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/51975581",
+        "publication_date": "2024-01-19",
+        "media_coverage_title": {
+          "ja": "JAXA 新卒/既卒採用 新入社員による就活体験談",
+          "en": "JAXA New Graduate/Experienced Hire Recruitment: New Employee Job Hunting Experiences"
+        },
+        "publisher": {
+          "ja": "宇宙航空研究開発機構 (JAXA) 広報部",
+          "en": "Japan Aerospace Exploration Agency (JAXA) Public Relations Department"
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/45883172",
+        "event": {
+          "ja": "聖教新聞社",
+          "en": "SEIKYO SHIMBUN"
+        },
+        "publication_date": "2023-02-24",
+        "media_coverage_title": {
+          "ja": "価値創造への挑戦 生活支援ロボットの国際大会で優勝",
+          "en": "The Challenge of Value Creation / Winner of an International Life Support Robotics Competition"
+        }
+      },
+      {
+        "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/45883203",
+        "event": {
+          "ja": "創大Days",
+          "en": "Sodai Days"
+        },
+        "publication_date": "2022-06-23",
+        "media_coverage_title": {
+          "ja": "ロボット開発に打ち込んだ挑戦と成長の日々",
+          "en": "Challenges and Growth Dedicated to Robot Development"
+        },
+        "publisher": {
+          "ja": "創価大学",
+          "en": "Soka University"
         }
       }
     ]

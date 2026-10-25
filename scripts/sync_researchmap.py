@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 API = "https://api.researchmap.jp/yukiikeda"
 PROFILE = "https://researchmap.jp/yukiikeda"
 CACHE = ROOT / "data/researchmap.json"
-TYPES = ("research_experience", "published_papers", "presentations")
+TYPES = ("research_experience", "published_papers", "presentations", "media_coverage")
 
 
 def localized(value, lang):
@@ -44,8 +44,9 @@ def normalize(raw):
             affiliations.append(entry)
     fields = ("@id", "affiliation", "section", "job", "from_date", "to_date",
               "paper_title", "presentation_title", "publication_name", "event",
-              "publication_date", "from_event_date", "authors", "presenters")
-    result = {"schema_version": 1, "source": PROFILE,
+              "publication_date", "from_event_date", "authors", "presenters",
+              "media_coverage_title", "publisher")
+    result = {"schema_version": 2, "source": PROFILE,
               "synced_at": datetime.now(timezone.utc).isoformat(),
               "affiliations": affiliations}
     for kind in TYPES:
@@ -145,6 +146,34 @@ def render_publications(data, lang):
     return "\n".join(result)
 
 
+def render_media(data, lang):
+    """Render a compact preview; full articles remain on their original sites."""
+    ja = lang == "ja"
+    group = data.get("media_coverage")
+    if group is None:
+        # Older snapshots have no media data; do not report this as zero records.
+        message = "メディア報道は次回の同期成功時に取得します。" if ja else "Media coverage will be available after the next successful sync."
+        return f'<p>{message}</p><a href="{PROFILE}/media_coverage" target="_blank" rel="noopener noreferrer">researchmap ↗</a>'
+    items = sorted(group["items"], key=lambda item: item.get("publication_date", ""), reverse=True)[:10]
+    count = f'公開登録 {group["total"]}件 / {len(items)}件を表示' if ja else f'{len(items)} shown / {group["total"]} public records'
+    result = [source_note(data, lang), f'<p class="sync-note">{text(count)}</p>', '<ol class="publication-list">']
+    for item in items:
+        title = localized(item.get("media_coverage_title"), lang) or ("無題" if ja else "Untitled")
+        url = item.get("@id", "").replace(API + "/", PROFILE + "/", 1)
+        if not url.startswith(PROFILE + "/media_coverage/"):
+            url = PROFILE + "/media_coverage"
+        values = [localized(item.get(key), lang) for key in ("publisher", "event")]
+        values.append(item.get("publication_date", ""))
+        metadata = " · ".join(dict.fromkeys(value for value in values if value))
+        result.append(f'<li><a href="{text(url)}" target="_blank" rel="noopener noreferrer">{text(title)}</a><p>{text(metadata)}</p></li>')
+    result.append('</ol>')
+    if not items:
+        result.append(f'<p>{"公開されているメディア報道はありません。" if ja else "No public media coverage records available."}</p>')
+    label = "すべてのメディア報道をresearchmapで見る ↗" if ja else "View all media coverage on researchmap ↗"
+    result.append(f'<a class="primary" href="{PROFILE}/media_coverage" target="_blank" rel="noopener noreferrer">{label}</a>')
+    return "\n".join(result)
+
+
 def replace_block(page, name, content):
     start = f'<!-- researchmap:{name}:start -->'
     end = f'<!-- researchmap:{name}:end -->'
@@ -178,6 +207,7 @@ def main():
         page = path.read_text(encoding="utf-8")
         page = replace_block(page, "publications", render_publications(data, lang))
         page = replace_block(page, "career", render_career(data, lang))
+        page = replace_block(page, "media", render_media(data, lang))
         pages.append((path, page))
     if fresh:
         CACHE.parent.mkdir(exist_ok=True)

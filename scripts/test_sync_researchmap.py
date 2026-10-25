@@ -38,6 +38,29 @@ class SyncTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             sync.normalize(raw)
 
+    def test_media_order_limit_fallback_and_safe_output(self):
+        self.data["media_coverage"] = {"total": 12, "items": [
+            {"media_coverage_title": {"ja": f"Report {i:02d}<script>"},
+             "publication_date": f"2026-01-{i:02d}",
+             "publisher": {"ja": "Publisher & Co"},
+             "@id": "javascript:alert(1)"} for i in range(1, 13)
+        ]}
+        html = sync.render_media(self.data, "en")
+        self.assertEqual(html.count('<li>'), 10)
+        self.assertLess(html.index('Report 12'), html.index('Report 11'))
+        self.assertNotIn('Report 02', html)
+        self.assertNotIn('<script>', html)
+        self.assertNotIn('javascript:', html)
+        self.assertIn('Publisher &amp; Co', html)
+        self.assertIn('10 shown / 12 public records', html)
+        self.assertIn('rel="noopener noreferrer"', html)
+
+    def test_media_old_snapshot_and_empty_records(self):
+        self.data.pop("media_coverage", None)
+        self.assertIn('next successful sync', sync.render_media(self.data, 'en'))
+        self.data['media_coverage'] = {'total': 0, 'items': []}
+        self.assertIn('No public media coverage', sync.render_media(self.data, 'en'))
+
     def test_network_failure_preserves_snapshot_and_renders_both_pages(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -45,7 +68,7 @@ class SyncTests(unittest.TestCase):
             cache = root / "researchmap.json"
             original = json.dumps(self.data)
             cache.write_text(original, encoding="utf-8")
-            template = "<main><!-- researchmap:publications:start --><!-- researchmap:publications:end --><!-- researchmap:career:start --><!-- researchmap:career:end --></main>"
+            template = "<main><!-- researchmap:publications:start --><!-- researchmap:publications:end --><!-- researchmap:career:start --><!-- researchmap:career:end --><!-- researchmap:media:start --><!-- researchmap:media:end --></main>"
             for path in (root / "index.html", root / "en/index.html"):
                 path.write_text(template, encoding="utf-8")
             with patch.object(sync, "ROOT", root), patch.object(sync, "CACHE", cache), patch.object(sync, "fetch", side_effect=TimeoutError("test timeout")), patch("sys.argv", ["sync", "--allow-stale"]):

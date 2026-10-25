@@ -8,6 +8,7 @@ from pathlib import Path
 import re
 import sys
 from urllib.request import Request, urlopen
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 API = "https://api.researchmap.jp/yukiikeda"
@@ -45,8 +46,8 @@ def normalize(raw):
     fields = ("@id", "affiliation", "section", "job", "from_date", "to_date",
               "paper_title", "presentation_title", "publication_name", "event",
               "publication_date", "from_event_date", "authors", "presenters",
-              "media_coverage_title", "publisher")
-    result = {"schema_version": 2, "source": PROFILE,
+              "media_coverage_title", "publisher", "description", "see_also")
+    result = {"schema_version": 3, "source": PROFILE,
               "synced_at": datetime.now(timezone.utc).isoformat(),
               "affiliations": affiliations}
     for kind in TYPES:
@@ -74,6 +75,41 @@ def text(value):
     return escape(str(value), quote=True)
 
 
+def researchmap_url(path, lang):
+    return f'{path}?lang={lang}'
+
+
+def safe_external_url(value):
+    if not isinstance(value, str) or any(c.isspace() or ord(c) < 32 for c in value):
+        return False
+    try:
+        parts = urlsplit(value)
+        return parts.scheme in ("https", "http") and bool(parts.hostname) and not parts.username and not parts.password
+    except ValueError:
+        return False
+
+
+def media_url(item, lang):
+    # Only explicitly labelled URLs select a language; prose URLs are ignored.
+    description = item.get("description", {})
+    descriptions = ([description.get(lang, ""), description.get("ja" if lang == "en" else "en", "")]
+                    if isinstance(description, dict) else [description])
+    label = "JP" if lang == "ja" else "EN"
+    for value in descriptions:
+        if not isinstance(value, str):
+            continue
+        for match in re.finditer(r'URL\s*\(\s*' + label + r'\s*\)\s*:\s*(\S+)', value, re.I):
+            if safe_external_url(match[1]):
+                return match[1]
+    for link in item.get("see_also", []):
+        if isinstance(link, dict) and safe_external_url(link.get("@id")):
+            return link["@id"]
+    url = item.get("@id", "").replace(API + "/", PROFILE + "/", 1)
+    if not url.startswith(PROFILE + "/media_coverage/"):
+        url = PROFILE + "/media_coverage"
+    return researchmap_url(url, lang)
+
+
 def period(item, lang):
     start = item.get("from_date", "")
     end = item.get("to_date", "")
@@ -94,7 +130,7 @@ def affiliation(item, lang):
 def source_note(data, lang):
     label = "最終取得" if lang == "ja" else "Last synced"
     return (f'<p class="sync-note">{label}: {text(data["synced_at"][:10])} (UTC) · '
-            f'<a href="{PROFILE}" target="_blank" rel="noopener noreferrer">researchmap ↗</a></p>')
+            f'<a href="{researchmap_url(PROFILE, lang)}" target="_blank" rel="noopener noreferrer">researchmap ↗</a></p>')
 
 
 def render_career(data, lang):
@@ -132,6 +168,7 @@ def render_publications(data, lang):
             url = item.get("@id", "").replace(API + "/", PROFILE + "/", 1)
             if not url.startswith(PROFILE + "/"):
                 url = PROFILE
+            url = researchmap_url(url, lang)
             authors = localized(item.get("authors", item.get("presenters", {})), lang)
             authors = ", ".join(person.get("name", "") for person in authors) if isinstance(authors, list) else authors
             venue = localized(item.get("publication_name", item.get("event", {})), lang)
@@ -142,7 +179,7 @@ def render_publications(data, lang):
         if not items:
             result.append(f'<p>{"公開情報はありません。" if ja else "No public records available."}</p>')
     label = "すべての研究業績をresearchmapで見る ↗" if ja else "View all research outputs on researchmap ↗"
-    result.append(f'<a class="primary" href="{PROFILE}" target="_blank" rel="noopener noreferrer">{label}</a>')
+    result.append(f'<a class="primary" href="{researchmap_url(PROFILE, lang)}" target="_blank" rel="noopener noreferrer">{label}</a>')
     return "\n".join(result)
 
 
@@ -153,15 +190,13 @@ def render_media(data, lang):
     if group is None:
         # Older snapshots have no media data; do not report this as zero records.
         message = "メディア報道は次回の同期成功時に取得します。" if ja else "Media coverage will be available after the next successful sync."
-        return f'<p>{message}</p><a href="{PROFILE}/media_coverage" target="_blank" rel="noopener noreferrer">researchmap ↗</a>'
+        return f'<p>{message}</p><a href="{researchmap_url(PROFILE + "/media_coverage", lang)}" target="_blank" rel="noopener noreferrer">researchmap ↗</a>'
     items = sorted(group["items"], key=lambda item: item.get("publication_date", ""), reverse=True)[:10]
     count = f'公開登録 {group["total"]}件 / {len(items)}件を表示' if ja else f'{len(items)} shown / {group["total"]} public records'
     result = [source_note(data, lang), f'<p class="sync-note">{text(count)}</p>', '<ol class="publication-list">']
     for item in items:
         title = localized(item.get("media_coverage_title"), lang) or ("無題" if ja else "Untitled")
-        url = item.get("@id", "").replace(API + "/", PROFILE + "/", 1)
-        if not url.startswith(PROFILE + "/media_coverage/"):
-            url = PROFILE + "/media_coverage"
+        url = media_url(item, lang)
         values = [localized(item.get(key), lang) for key in ("publisher", "event")]
         values.append(item.get("publication_date", ""))
         metadata = " · ".join(dict.fromkeys(value for value in values if value))
@@ -170,7 +205,7 @@ def render_media(data, lang):
     if not items:
         result.append(f'<p>{"公開されているメディア報道はありません。" if ja else "No public media coverage records available."}</p>')
     label = "すべてのメディア報道をresearchmapで見る ↗" if ja else "View all media coverage on researchmap ↗"
-    result.append(f'<a class="primary" href="{PROFILE}/media_coverage" target="_blank" rel="noopener noreferrer">{label}</a>')
+    result.append(f'<a class="primary" href="{researchmap_url(PROFILE + "/media_coverage", lang)}" target="_blank" rel="noopener noreferrer">{label}</a>')
     return "\n".join(result)
 
 

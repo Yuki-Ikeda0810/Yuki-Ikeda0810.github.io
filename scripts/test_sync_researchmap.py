@@ -61,6 +61,50 @@ class SyncTests(unittest.TestCase):
         self.data['media_coverage'] = {'total': 0, 'items': []}
         self.assertIn('No public media coverage', sync.render_media(self.data, 'en'))
 
+    def test_media_url_priority_and_languages(self):
+        item = {
+            '@id': sync.API + '/media_coverage/123',
+            'description': {
+                'ja': 'URL (JP) : https://example.com/ja',
+                'en': 'URL (EN): https://example.com/en?a=1&b=2',
+            },
+            'see_also': [{'@id': 'https://example.com/shared'}],
+        }
+        self.assertEqual(sync.media_url(item, 'ja'), 'https://example.com/ja')
+        self.assertEqual(sync.media_url(item, 'en'), 'https://example.com/en?a=1&b=2')
+        del item['description']['en']
+        self.assertEqual(sync.media_url(item, 'en'), 'https://example.com/shared')
+        item['description']['ja'] += '\nURL (EN): https://example.com/english'
+        self.assertEqual(sync.media_url(item, 'en'), 'https://example.com/english')
+        item.pop('description')
+        item.pop('see_also')
+        for lang in ('ja', 'en'):
+            self.assertEqual(sync.media_url(item, lang), sync.PROFILE + '/media_coverage/123?lang=' + lang)
+
+    def test_media_unsafe_and_unlabelled_urls_are_ignored(self):
+        item = {
+            'description': {'en': 'https://example.com/unlabelled\nURL (EN): javascript:alert(1)'},
+            'see_also': [{'@id': 'javascript:alert(2)'}, {'@id': 'https://example.com/shared'}],
+        }
+        self.assertEqual(sync.media_url(item, 'en'), 'https://example.com/shared')
+        item['see_also'] = []
+        self.assertEqual(sync.media_url(item, 'en'), sync.PROFILE + '/media_coverage?lang=en')
+
+    def test_research_outputs_and_source_links_use_page_language(self):
+        for lang in ('ja', 'en'):
+            html = sync.render_publications(self.data, lang)
+            self.assertIn('?lang=' + lang + '"', html)
+            self.assertNotIn('?lang=' + ('ja' if lang == 'en' else 'en'), html)
+
+    def test_normalize_keeps_media_link_fields(self):
+        item = {'description': {'en': 'URL (EN): https://example.com/en'},
+                'see_also': [{'@id': 'https://example.com/ja'}]}
+        raw = {'permalink': 'yukiikeda', 'affiliations': [], '@graph': [
+            {'@type': kind, 'items': [item] if kind == 'media_coverage' else [], 'total_items': 1 if kind == 'media_coverage' else 0}
+            for kind in sync.TYPES
+        ]}
+        self.assertEqual(sync.normalize(raw)['media_coverage']['items'], [item])
+
     def test_network_failure_preserves_snapshot_and_renders_both_pages(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

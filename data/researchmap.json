@@ -1,7 +1,7 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "source": "https://researchmap.jp/yukiikeda",
-  "synced_at": "2026-10-25T08:10:46.594748+00:00",
+  "synced_at": "2026-10-25T09:12:58.258207+00:00",
   "affiliations": [
     {
       "affiliation": {
@@ -379,7 +379,19 @@
               "name": "Hiroki Kato"
             }
           ]
-        }
+        },
+        "see_also": [
+          {
+            "@id": "https://roscon.ros.org/jp/2026/presentations/D1-07.pdf",
+            "label": "url",
+            "is_downloadable": false
+          },
+          {
+            "@id": "https://vimeo.com/showcase/12425759?video=1227556004",
+            "label": "url",
+            "is_downloadable": false
+          }
+        ]
       },
       {
         "@id": "https://api.researchmap.jp/yukiikeda/presentations/54892416",
@@ -428,7 +440,19 @@
               "name": "Yuki Ikeda"
             }
           ]
-        }
+        },
+        "see_also": [
+          {
+            "@id": "https://www.i-homerobotics.org/home",
+            "label": "url",
+            "is_downloadable": false
+          },
+          {
+            "@id": "https://qiita.com/YukiIkeda_robot/items/aed18db60e41e4fa6a52",
+            "label": "url",
+            "is_downloadable": false
+          }
+        ]
       },
       {
         "@id": "https://api.researchmap.jp/yukiikeda/presentations/51863377",
@@ -638,7 +662,17 @@
               "name": "Tsuyoshi Ito"
             }
           ]
-        }
+        },
+        "description": {
+          "en": "DOI Registered Title: “Development and Orbital Operation Considerations of a Free-Flyer Robot for Monitoring and Teleoperation Aboard a Space Station”\nOral Presentation Title: “Development and Ground Testing of a Free-Flying Robot with Tether Management System and Human-Interaction Functions for Space Station Applications”"
+        },
+        "see_also": [
+          {
+            "@id": "https://doi.org/10.52202/083083-0039",
+            "label": "url",
+            "is_downloadable": false
+          }
+        ]
       },
       {
         "@id": "https://api.researchmap.jp/yukiikeda/presentations/51466471",
@@ -674,7 +708,19 @@
               "name": "Hiroki Kato"
             }
           ]
-        }
+        },
+        "see_also": [
+          {
+            "@id": "https://roscon.jp/presentations/09.pdf",
+            "label": "url",
+            "is_downloadable": false
+          },
+          {
+            "@id": "https://vimeo.com/showcase/11902017?video=1122709031",
+            "label": "url",
+            "is_downloadable": false
+          }
+        ]
       },
       {
         "@id": "https://api.researchmap.jp/yukiikeda/presentations/51466470",
@@ -790,7 +836,14 @@
               "name": "Sho Oi"
             }
           ]
-        }
+        },
+        "see_also": [
+          {
+            "@id": "https://jglobal.jst.go.jp/detail?JGLOBAL_ID=202502215748028098",
+            "label": "url",
+            "is_downloadable": false
+          }
+        ]
       },
       {
         "@id": "https://api.researchmap.jp/yukiikeda/presentations/50418342",
@@ -899,7 +952,14 @@
               "name": "Taro Kashiwayanagi"
             }
           ]
-        }
+        },
+        "see_also": [
+          {
+            "is_downloadable": false,
+            "@id": "https://space-flight.org/docs/2025_winter/2025_winter.html",
+            "label": "url"
+          }
+        ]
       },
       {
         "@id": "https://api.researchmap.jp/yukiikeda/presentations/49030501",
@@ -946,7 +1006,19 @@
               "name": "Kosuke Sukegawa"
             }
           ]
-        }
+        },
+        "see_also": [
+          {
+            "is_downloadable": false,
+            "@id": "https://www.aiaa.org/SciTech",
+            "label": "url"
+          },
+          {
+            "is_downloadable": false,
+            "@id": "https://arc.aiaa.org/doi/10.2514/6.2025-1947",
+            "label": "url"
+          }
+        ]
       },
       {
         "@id": "https://api.researchmap.jp/yukiikeda/presentations/48521180",
@@ -986,7 +1058,14 @@
               "name": "Debris Demonstration Team (Japan Aerospace Exploration Agency"
             }
           ]
-        }
+        },
+        "see_also": [
+          {
+            "is_downloadable": false,
+            "@id": "https://smartconf.jp/content/ukaren68/program_list",
+            "label": "url"
+          }
+        ]
       }
     ]
   },
@@ -1007,7 +1086,17 @@
         "publisher": {
           "ja": "創価大学",
           "en": "Soka University"
-        }
+        },
+        "description": {
+          "ja": "研究室での問いから、未知への挑戦が始まった。\n「やりたい」と口に出せば、その学生の背中を、創価大学の先生は押してくれます。夢に向かって一歩を踏み出すのに、学年や成績は関係ありません。大学では知能ロボットの競技会「RoboCup」に仲間と挑み、現在は JAXAで宇宙ロボットの研究に取り組む池田勇輝さん。その挑戦もシンプルな「やりたい」という気持ちから始まりました。",
+          "en": "A Question in the Lab Sparked a Journey into the Unknown.\nAt Soka University, professors encourage students to pursue their ambitions whenever they express a desire to try something new. Neither their year of study nor their academic performance matters when it comes to taking the first step toward their dreams. During his university years, Yuki Ikeda competed in “RoboCup,” an intelligent robotics competition, alongside his teammates. Today, he conducts research on space robotics at JAXA (Japan Aerospace Exploration Agency). His journey, too, began with a simple feeling: “I want to give it a try.”"
+        },
+        "see_also": [
+          {
+            "@id": "https://www.soka.ac.jp/sun_file/131/9/index.html",
+            "label": "url"
+          }
+        ]
       },
       {
         "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/54695746",
@@ -1019,7 +1108,17 @@
         "publisher": {
           "ja": "宇宙航空研究開発機構 (JAXA) YouTube",
           "en": "Japan Aerospace Exploration Agency (JAXA) YouTube"
-        }
+        },
+        "description": {
+          "ja": "宇宙では今、宇宙ゴミ「スペースデブリ」の捕獲・除去をはじめ、人工衛星への燃料補給、組み立て、保守・修理など、宇宙空間で行うさまざまな「軌道上サービス」の実現が期待されています。\n\nこうした軌道上サービスを実現するためには、地球の周りを高速で周回し、回転している場合もある人工衛星やデブリに接近し、対象の物体との位置・速度・姿勢を合わせながら、安全かつ確実に捕獲・操作する必要があります。\n\nしかし、宇宙では、自動車のように実際の環境で何度も試験を繰り返すことは難しく、多くの場合、宇宙空間で初めて本番運用を迎えることになります。\nそのため、センサや制御系、ロボットアームなどを組み合わせたシステム全体が、宇宙で想定どおりに機能することを、打ち上げ前に地上で十分に確認しなければなりません。\n\nそこで重要な課題となるのが、「宇宙特有の物体の動きを地上でいかに再現し、事前に検証するか」です。\n\nこのような課題に対応するため、JAXAが開発したのが、宇宙空間における物体の動きを地上で再現する試験設備、「軌道上サービス技術プラットフォーム（SATDyn）」です。\n\nSATDynを活用することで、さまざまな軌道上サービスに欠かせない、対象の物体への接近・捕獲技術を地上で検証することができます。\n\n本動画では、今後の軌道上サービスを支えるSATDynの仕組みと、その革新的な技術をご紹介します。\n\nURL (JP) : https://www.youtube.com/watch?v=LTkBqRptvHo",
+          "en": "Today, a variety of on-orbit services are expected to become a reality, including the capture and removal of space debris, satellite refueling, and the on-orbit assembly, maintenance, and repair of space systems.\n\nTo realize these on-orbit services, it is necessary to approach satellites and debris that orbit the Earth at high speeds and may also be rotating, match the target object’s position, velocity, and attitude, and capture and manipulate it safely and reliably.\n\nHowever, unlike automobiles, which can be repeatedly tested in actual operating environments, missions of this kind often undergo their first full-scale operation in space.\nTherefore, the entire system—including sensors, control systems, and robotic arms—must be thoroughly tested and verified on the ground before launch to ensure that it will function as intended in space.\n\nA key challenge, therefore, is how the unique motion of objects in space can be reproduced and tested on the ground in advance.\n\nTo address this challenge, JAXA developed \"SATellite Dynamics test platform for on-orbit servicing technology (SATDyn)\" , a testing facility designed to reproduce the motion of objects in space on Earth.\nSATDyn makes it possible to validate technologies for approaching and capturing target objects on the ground, which are essential for various on-orbit services.\n\nIn this video, we introduce how SATDyn works and the innovative technologies behind it.\n\nURL (EN) : https://www.youtube.com/watch?v=6xhwpzKdXIs&t=51s"
+        },
+        "see_also": [
+          {
+            "@id": "https://www.youtube.com/watch?v=LTkBqRptvHo",
+            "label": "url"
+          }
+        ]
       },
       {
         "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/51466480",
@@ -1031,7 +1130,16 @@
         "media_coverage_title": {
           "ja": "CGWORLD 2025年10月号 vol.326",
           "en": "CGWORLD October 2025 Issue, Vol. 326"
-        }
+        },
+        "description": {
+          "ja": "特集 実用デジタルツイン ショーケース\n宇宙開発、自動運転、製造DXなど、各分野の最前線で“実証”から“実装”へと進むデジタルツインの最新事例と開発ノウハウを一挙紹介。さらに初心者にもわかる技術解説から、開発者が語る最新テックまで、これから取り組む人にも、深く極めたい人にも必読の大特集。\n\n表紙は、スペースデータのバーチャル国際宇宙ステーション（ISS）を舞台にした、Awwによるバーチャルヒューマン「imma」と「MIRAI」の撮り下ろし！"
+        },
+        "see_also": [
+          {
+            "@id": "https://cgworld.jp/magazine/cgw326.html",
+            "label": "url"
+          }
+        ]
       },
       {
         "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/50917653",
@@ -1047,7 +1155,16 @@
         "publisher": {
           "ja": "宇宙航空研究開発機構 (JAXA) 研究開発部門",
           "en": "Japan Aerospace Exploration Agency (JAXA) Research and Development Directorate"
-        }
+        },
+        "description": {
+          "ja": "国立研究開発法人宇宙航空研究開発機構（JAXA）は、オープンソースソフトウェア「ROS2 and cFS System（RACS2）Bridge(*1)」の軌道上実証実験を2025年5月に実施し、機能確認に成功しました。\nこの実験は、国際宇宙ステーション（ISS）に搭載された自律カメラロボット「Int-Ball2(*2)」の技術実証プラットフォーム(*3)を用いて行われました。この実証の意義は、RACS2 Bridgeの機能を用いて地上で広く使われているROS2(*4)と、信頼性の高いcFS(*5)制御環境を両立できることを証明した点にあります。これにより、宇宙分野に関心の高い地上ユーザーにとって、宇宙ロボット開発への参入が一層身近になり、大きな一歩となります。"
+        },
+        "see_also": [
+          {
+            "@id": "https://www.kenkai.jaxa.jp/research/innovation/racs2.html",
+            "label": "url"
+          }
+        ]
       },
       {
         "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/47588782",
@@ -1063,7 +1180,16 @@
         "publisher": {
           "ja": "Wantedly株式会社",
           "en": "Wantedly Inc."
-        }
+        },
+        "description": {
+          "ja": "みなさん。こんにちは。スペースデータ採用担当です。\nスペースデータで一緒に働くメンバーがどんなことを実際にやっているのか、社内の様子を少しでも皆様にお届けできるよう、社員インタビューや対談インタビューなど発信をしています。本日は、宇宙ロボット開発統括(Tech Lead)として活躍している池田勇輝さんへのインタビューです。池田さんのスペースデータでの挑戦、そして宇宙開発への情熱について紹介いたします！"
+        },
+        "see_also": [
+          {
+            "@id": "https://www.wantedly.com/companies/spacedata/post_articles/923015",
+            "label": "url"
+          }
+        ]
       },
       {
         "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/47521724",
@@ -1079,7 +1205,16 @@
         "publisher": {
           "ja": "株式会社 日経BP",
           "en": "Nikkei Business Publications, Inc."
-        }
+        },
+        "description": {
+          "ja": "スペースデブリ（宇宙ゴミ）は年々増加し続けており、将来の宇宙開発の妨げになると考えられている。そこで宇宙航空研究開発機構（JAXA）は、スペースデブリ除去のための捕獲技術に応用可能な実機を用いたシミュレーターを研究開発している。これはデブリをつかむロボットアームや、デブリの動きを模擬するターゲット駆動装置などから構成されており、制御の部分でJAXAはdSPACEのソリューションを採用した。このプロジェクトに携わるJAXAの水野光氏と池田勇輝氏に詳細を聞いた。"
+        },
+        "see_also": [
+          {
+            "@id": "https://special.nikkeibp.co.jp/atclh/NXT/20/dSPACE2020/vol11_1/",
+            "label": "url"
+          }
+        ]
       },
       {
         "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/53847917",
@@ -1095,7 +1230,17 @@
         "publisher": {
           "ja": "宇宙航空研究開発機構 (JAXA)",
           "en": "Japan Aerospace Exploration Agency (JAXA)"
-        }
+        },
+        "description": {
+          "ja": "宇宙航空研究開発機構（以下、JAXA）が進める「商業デブリ除去実証（CRD2）(※1)フェーズI」の実証衛星ADRAS-J(※2)が、非協力的ターゲット(※3)であるスペースデブリを「周回観測」にて撮影した画像を、株式会社アストロスケールが公開しました。\nURL (JP) : https://www.jaxa.jp/press/2024/07/20240730-1_j.html",
+          "en": "The Japan Aerospace Exploration Agency (JAXA) has advanced the Commercial Removal of Debris Demonstration (CRD2) (*1) Phase I project. Under this initiative, the demonstration satellite ADRAS-J (*2), developed by Astroscale Japan Inc., has successfully captured images of space debris, a non-cooperative target (*3), through \"Fly-around observation.\" These images have now been released by Astroscale Japan Inc.\nURL (EN) : https://global.jaxa.jp/press/2024/07/20240730-1_e.html"
+        },
+        "see_also": [
+          {
+            "@id": "https://www.jaxa.jp/press/2024/07/20240730-1_j.html",
+            "label": "url"
+          }
+        ]
       },
       {
         "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/53847879",
@@ -1111,7 +1256,17 @@
         "publisher": {
           "ja": "宇宙航空研究開発機構 (JAXA)",
           "en": "Japan Aerospace Exploration Agency (JAXA)"
-        }
+        },
+        "description": {
+          "ja": "宇宙航空研究開発機構（以下、JAXA）が進める「商業デブリ除去実証（CRD2）(※1)フェーズI」の実証衛星ADRAS-J(※2)が、非協力的ターゲット(※3)であるスペースデブリを「定点観測」にて撮影した画像を、株式会社アストロスケールが公開しました。\nURL (JP) : https://www.jaxa.jp/press/2024/06/20240614-2_j.html",
+          "en": "The Japan Aerospace Exploration Agency (JAXA) has advanced the Commercial Removal of Debris Demonstration (CRD2) (*1) Phase I project, under which the demonstration satellite Astroscale’s ADRAS-J (*2) has successfully captured images of space debris, a non-cooperative target (*3), through \"fixed-point observation.\" These images have been released by Astroscale Japan Inc.\nURL (EN) : https://global.jaxa.jp/press/2024/06/20240614-2_e.html"
+        },
+        "see_also": [
+          {
+            "@id": "https://www.jaxa.jp/press/2024/06/20240614-2_j.html",
+            "label": "url"
+          }
+        ]
       },
       {
         "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/53847853",
@@ -1127,7 +1282,17 @@
         "publisher": {
           "ja": "宇宙航空研究開発機構 (JAXA)",
           "en": "Japan Aerospace Exploration Agency (JAXA)"
-        }
+        },
+        "description": {
+          "ja": "宇宙航空研究開発機構（以下、JAXA）は、持続的な宇宙活動の実現のためにスペースデブリ（宇宙ゴミ）除去を新規宇宙事業として拓くことを目的として「商業デブリ除去実証（CRD2）(※1)フェーズI」を進めております。このたびのCRD2フェーズIの実証衛星ADRAS-J(※2)が、非協力的ターゲット(※3)であるスペースデブリへの接近中に撮影した画像を、株式会社アストロスケールが公開しました。\nURL (JP) : https://www.jaxa.jp/press/2024/04/20240426-2_j.html",
+          "en": "The Japan Aerospace Exploration Agency (JAXA) is advancing the Commercial Removal of Debris Demonstration (CRD2) (*1) Phase I with the goal of pioneering new space business in space debris removal to ensure sustainable space activities. Astroscale Japan Inc. has released an image captured by the demonstration satellite ADRAS-J (*2) while approaching a non-cooperative target (*3), space debris.\nURL (EN) : https://global.jaxa.jp/press/2024/04/20240426-2_e.html"
+        },
+        "see_also": [
+          {
+            "@id": "https://www.jaxa.jp/press/2024/04/20240426-2_j.html",
+            "label": "url"
+          }
+        ]
       },
       {
         "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/51975581",
@@ -1139,7 +1304,16 @@
         "publisher": {
           "ja": "宇宙航空研究開発機構 (JAXA) 広報部",
           "en": "Japan Aerospace Exploration Agency (JAXA) Public Relations Department"
-        }
+        },
+        "description": {
+          "ja": "🔰～新入職員による就活体験談編～🔰\nJAXAの職員たちは、学生時代にはどのように就活をしていたのでしょうか…？？\n入構１年目の新入職員に、気になる就活エピソードをインタビュー！🚀\n\n今回は、学生時代に携わっていたロボット研究の観点から、宇宙開発へとアプローチすることを目指す技術系新入職員の紹介です！"
+        },
+        "see_also": [
+          {
+            "@id": "https://www.instagram.com/p/C2Q3HvtSoHh/?igsh=cjhod242MzMybGQ1",
+            "label": "url"
+          }
+        ]
       },
       {
         "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/45883172",
@@ -1151,7 +1325,16 @@
         "media_coverage_title": {
           "ja": "価値創造への挑戦 生活支援ロボットの国際大会で優勝",
           "en": "The Challenge of Value Creation / Winner of an International Life Support Robotics Competition"
-        }
+        },
+        "description": {
+          "ja": "創価大学理工学部、崔龍雲研究室のチーム「SOBITS」は、人工知能（AI）を搭載した自律移動型ロボットを開発し、国際競技大会で優勝するなど、目覚ましい成果を上げる。経済産業省は、2019年に「ロボットによる社会変革推進計画」を発表。未来型の新たな産業の創出や、少子高齢化・人口減少などによる課題の解決へ、期待が高まる。今回の「価値創造への挑戦」では、今、注目の先進分野で活躍する創大生の奮闘を追った。"
+        },
+        "see_also": [
+          {
+            "@id": "https://www.seikyoonline.com/article/E3C72D179BBAEF63A1C9E578804F0A61?snstoken=df7ecbef-fb73-4170-ac6c-a010ec00f424",
+            "label": "url"
+          }
+        ]
       },
       {
         "@id": "https://api.researchmap.jp/yukiikeda/media_coverage/45883203",
@@ -1167,7 +1350,16 @@
         "publisher": {
           "ja": "創価大学",
           "en": "Soka University"
-        }
+        },
+        "description": {
+          "ja": "ロボットやAIは、これからの社会を豊かで便利にするものとして、さまざまな場所で研究開発が進められています。大学で学んだ知識と技術を結集させ、AIを搭載した生活支援ロボットの開発に取り組んでいるのが、理工学部・崔龍雲（チェ・ヨンウン）研究室のTeam SOBITS（チーム・ソビッツ）です。 学生たちが開発したロボットである「SOBIT EDU（ソビット・エデュ）」「SOBIT MINI（ソビット・ミニ）」「SOBIT PRO（ソビット・プロ）」は、昨年の「RoboCup Asia-Pacific 2021 Aichi Japan」の2つのリーグで優勝。今年の「RoboCup Japan Open」では、最難関の「Open Platform League(OPL)」で念願の初優勝を果たしました。今回の創大Daysでは、Team SOBITSのリーダーとしてチームを牽引した池田さんに、ロボット開発や研究への熱い思い、仲間との絆、学生生活の思い出などについて語っていただきました。"
+        },
+        "see_also": [
+          {
+            "@id": "https://www.soka.ac.jp/sodai_days/2022/06/7313/",
+            "label": "url"
+          }
+        ]
       }
     ]
   }
